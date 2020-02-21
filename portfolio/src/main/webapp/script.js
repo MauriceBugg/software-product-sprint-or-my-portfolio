@@ -13,16 +13,18 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random album to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomAlbum() {
+  const favorite_album =
+      ['Drake: Take Care', 'Adele: 25', 'Weekend: Trilogy', 'Kanye West: The Life of Pablo', 
+      'Sam Smith: In the Lonely Hour', '2 Chainz: Based On A T.R.U. Story', 'Yung Thug: So Much Fun',
+      'Maroon 5: V', 'Imagine Dragons: Night Visions'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random album.
+  const album = favorite_album[Math.floor(Math.random() * favorite_album.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const albumContainer = document.getElementById('album-container');
+  albumContainer.innerText = album;
 }
