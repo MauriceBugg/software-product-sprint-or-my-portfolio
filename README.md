@@ -1,3 +1,3 @@
 # Google Software Product Sprint
 
-THis repo contians Maurice Bugg's portfolio and SPS projects.
+This repo contians Maurice Bugg's portfolio and SPS projects.
