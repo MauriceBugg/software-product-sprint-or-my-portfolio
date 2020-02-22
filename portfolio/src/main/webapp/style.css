@@ -184,7 +184,7 @@ body
 .timeline li h4 span
 {
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: #fff;
 }
 
 .timeline li::before
@@ -315,3 +315,15 @@ body
     color: #000;
 }
 
+.links
+{
+    color: #fff;  
+    text-decoration: underline;
+}
+
+.links:hover
+{
+    color: #fff;  
+    font-size: 12px;
+     text-decoration: none;
+}
