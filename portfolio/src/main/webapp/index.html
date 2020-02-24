@@ -2,17 +2,296 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Maurice's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    <link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    
+  <!--------------------Header Section-------------------->
+    <section id="header">
+        <div class="container text-center">
+            <div class="welcome">
+                <h1>WELCOME TO MAURICE'S PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="scroll-btn">
+            <div class="scroll-bar"><a href="#about">Click Me</a></div>
+        </div>
+    </section>
+
+    <!--------------------User'info-------------------->
+    <section id="user-info">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand"><img src="images/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#top">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">ABOUT ME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">RESUME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#activities">ACTIVITIES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    <!--------------------About-------------------->
+    <div class="about container" id="about">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img src="images/profile.jpg" class="profile-img">
+            </div>
+            <div class="col-md-6">
+                <h3> WHO AM I?</h3>
+                <p>
+                    Hey my name is Maurice Bugg, I am a sophomore Computer Engineering
+                    major at the University of Maryland. I live in The Prince Georges's County
+                    of Maryland and grew up in the D.C., Maryland, Virgina (DMV) area. In my free
+                    time I enjoy watching GREAT t.v. shows, exercising, being adventurous, chilling
+                    with friends, reading, eating bomb delicious food, and sleeping good.
+                </p>
+
+                <div class="skills-bar">
+                    <p>Java Programming</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:70%"> 70%
+                        </div>
+                    </div>
+
+                    <p>C Programming</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="40"
+                        aria-valuemin="0" aria-valuemax="100" style="width:40%"> 40%
+                        </div>
+                    </div>
+
+                    <p>Arduino</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="20"
+                        aria-valuemin="0" aria-valuemax="20" style="width:20%"> 20%
+                        </div>
+                    </div>
+
+                    <p>HTML, CSS, JavaScript</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="50" style="width:50%"> 50%
+                        </div>
+                    </div>
+                <div>
+            </div>
+        </div>
     </div>
+    <!--------------------RESUME-------------------->
+    <div class="resume" id="resume">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-center">My Experiences</h3>
+                <ul class="timeline">
+                    <li>
+                        <h4><span>2019 -</span> 
+                        Intern Researcher</h4>
+                        <p>
+                            Worked with 3 other undergraduate students and 3 faculty mentors
+                            on to discover Cyber Threat Intelligence from dark webhacker forums 
+                            using a data science approach.
+                        </p>
+                        <b>Company:</b> National Science Foundation<br>
+                        <b>Duration:</b> May 2019 - August 2019<br>
+                        <b>Location:</b> Bowie State University, Maryalnd
+                    </li>
+
+                    <li>
+                        <h4><span>2019 -</span> Participant</h4>
+                        <p>
+                            Selected to experience the learning and networking opportunities of 
+                            their in-person camps. Gained exposure to multiple career paths and 
+                            built the skills needed to successfully interview.
+                        </p>
+                        <b>Company:</b> Goldman Sachs<br>
+                        <b>Duration:</b> May 2019 - August 2019<br>
+                        <b>Location:</b> New York, New York
+                    </li>
+
+                    <li>
+                        <h4><span>2016 -</span> Software and Circuity Lead</h4>
+                        <p>
+                            Collaborated with 6 team members to design and build an autonomous over-sand
+                            vehicle that identified and analyzed debris at a mission site.
+                        </p>
+                        <b>Company:</b> University of Maryland<br>
+                        <b>Duration:</b> January 2018 - May 2018<br>
+                        <b>Location:</b> College Park, Maryland
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="text-center">My Education</h3>
+                <ul class="timeline">
+                    <li>
+                        <h4><span>2018 -</span> University of Maryland</h4>
+                        <p>
+                            The University of Maryland, College Park is the state's flagship university
+                            and one of the nation's preeminent public research universities. A global 
+                            leader in research, entrepreneurship and innovation, the university is home 
+                            to more than 41,000 students, 14,000 faculty and staff, and 377,000 alumni all 
+                            dedicated to the pursuit of Fearless Ideas. 
+                        </p>
+                        <b>Location:</b> College Park, Maryland<br>
+                        <b>Session:</b> 2018 to present<br>
+                        <b>GPA:</b> 3.3
+                    </li>
+
+                    <li>
+                        <h4><span>2014 -</span> Eleanor Roosevelt High School</h4>
+                        <p>
+                            A Maryland public magnet high school specializing in science, mathematics, 
+                            technology, and engineering. The school was established in 1976 at its current 
+                            location in Greenbelt, Maryland and is part of the Prince George's County 
+                            Public Schools system.
+                        </p>
+                        <b>Location:</b> Greenbelt, Maryland<br>
+                        <b>Session:</b> 2013 to 2018<br>
+                        <b>GPA:</b> 4.0
+                    </li>
+
+                    <li>
+                        <h4><span>2005 -</span> Robert Goddard French Immersion</h4>
+                        <p>
+                            A full immersion model where all academic subjects are taught in the French 
+                            language from Kindergarten through the 8th grade. French-speaking teachers 
+                            immerse students totally in French as they learn the Prince George’s County 
+                            Public Schools curriculum in mathematics, science, social studies, and Language
+                            Arts.
+                        </p>
+                        <b>Location:</b> Lanham, Maryland<br>
+                        <b>Session:</b> 2005 to 2013<br>
+                        <b>GPA:</b> 3.8
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------Activities-------------------->
+    <div class="activities" id="activities">
+        <div class="container">
+            <h1 class="text-center">My Favorite Activites</h1>
+            <p class="text-center">Want to see what I do in my free time
+            <br> Hover over the boxes below for a cool animation</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="activities-box">
+                        <span>Exercise</span>
+                        <p> 
+                            Right now I am on a Monday, Wednesday, Friday Training
+                            split. I am only doing three full body workouts a week, 
+                            and a 5k on Sundays!!!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="activities-box">
+                        </i><span>TV Shows</span>
+                        <p> 
+                            Currently Watching How To Get Away With Murder, Black Mirror,
+                            and I am about to start watching Demon Slayer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="activities-box">
+                        <i class="fas fa-book-open"></i><span>Reading</span>
+                        <p> 
+                            When I do get the time I like reading-self help book. 
+                            Right now books on stocks and communicaition are peaking my interest.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------------------Contact-------------------->
+    <div class="contact" id="contact">
+        <div class="container text-center">
+            <h1>Contact Me</h1>
+            <p class="text-center">Contact me anytime I am always on my phone
+                email. But please dont spam lol!
+            </p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <span>Github</span>
+                    <p> 
+                        <a class="links" href="https://github.com/MauriceBugg">MauriceBugg @github</a>
+                    <br> Do not really use github that much. You can try to contact 
+                    me though lol.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <span>Linkedin</span>
+                    <p> 
+                        <a class="links" href="https://linkedin.com/in/maurice-bugg">maurice-bugg @Linkedin</a>
+                    <br> If you do choose to connect with me please leave a message so 
+                    that I know where I either met you, or how we can help each other :)
+                </div>
+
+                <div class="col-md-4">
+                    <span>Email</span>
+                    <p> 
+                        <a class="links" href="mailto:mbugg@sps-program.com?Subject=Can we Hire You Maurice%20" 
+                        target="_top">mbugg@sps-program.com</a>
+                    <br> This is probably the best way to connect with me. I am always 
+                    checking my emails.
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-primary">
+                <a class="links" href="https://drive.google.com/open?id=1OpRIAqF3l1JjBBf36GjD-W7FA_uKfK5f">Resume</a>
+            </button>
+        </div>
+
+        <div class="footer text-center">
+            <p> Made by Maurice Bugg</p>
+        </div>
+    </div>
+    </section>
+
+<!--------------------Smooth Scroll-------------------->
+    <script src="smooth-scroll.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
   </body>
 </html>
