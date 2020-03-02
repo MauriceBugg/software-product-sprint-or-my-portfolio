@@ -15,8 +15,29 @@
 /**
  * Adds a random welcome message to welcome page.
  */
-async function getRandomQuoteUsingAsyncAwait() {
-  const response = await fetch('/data');
+function getRandomQuoteUsingArrowFunctions(){
+ /* const response = await fetch('/data');
   const greeting = await response.text();
-  document.getElementById('greeting-container').innerText = greeting;
+  document.getElementById('greeting-container').innerText = greeting;*/
+
+fetch('/data')  // sends a request to /my-data-url
+.then(response => response.json()) // parses the response as JSON
+.then((greetings) => { // now we can reference the fields in greetings!
+
+const greetListElement = document.getElementById('greeting-container');
+    greetListElement.innerHTML = '';
+    greetListElement.appendChild( 
+        createListElement('1: ' + greetings[0]));
+    greetListElement.appendChild(
+        createListElement('2: ' + greetings[1]));
+    greetListElement.appendChild(
+        createListElement('3: ' + greetings[2]));
+  });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }

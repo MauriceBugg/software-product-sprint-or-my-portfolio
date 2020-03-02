@@ -33,9 +33,10 @@ body
     padding-left: 30px;
     text-align: left;
     font-family: sans-serif;
-    color: rgb(255, 213, 213);
-    font-size: 40px;
+    color: rgb(253, 243, 243);
+    font-size: 30px;
     font-weight: bold;
+    background-color: rgba(250, 250, 250, 0.377)
 }
 
 .scroll-btn
