@@ -16,18 +16,26 @@ body
     background-attachment: fixed;
 }
 
-.welcome
+#welcome
 {
-    top: 35%;
+    top: 15%;
     position: absolute;
     text-align: center;
     font-family: sans-serif;
     color: #fff;
+    font-size: 70px;
 }
 
-.welcome h1
+#greeting-container
 {
-    font-size: 70px;
+    top: 60%;
+    position: absolute;
+    padding-left: 30px;
+    text-align: left;
+    font-family: sans-serif;
+    color: rgb(255, 213, 213);
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .scroll-btn

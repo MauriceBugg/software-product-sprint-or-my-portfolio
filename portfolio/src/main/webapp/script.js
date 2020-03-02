@@ -13,18 +13,10 @@
 // limitations under the License.
 
 /**
- * Adds a random album to the page.
+ * Adds a random welcome message to welcome page.
  */
-function addRandomAlbum() {
-  const favorite_album =
-      ['Drake: Take Care', 'Adele: 25', 'Weekend: Trilogy', 'Kanye West: The Life of Pablo', 
-      'Sam Smith: In the Lonely Hour', '2 Chainz: Based On A T.R.U. Story', 'Yung Thug: So Much Fun',
-      'Maroon 5: V', 'Imagine Dragons: Night Visions'];
-
-  // Pick a random album.
-  const album = favorite_album[Math.floor(Math.random() * favorite_album.length)];
-
-  // Add it to the page.
-  const albumContainer = document.getElementById('album-container');
-  albumContainer.innerText = album;
+async function getRandomQuoteUsingAsyncAwait() {
+  const response = await fetch('/data');
+  const greeting = await response.text();
+  document.getElementById('greeting-container').innerText = greeting;
 }

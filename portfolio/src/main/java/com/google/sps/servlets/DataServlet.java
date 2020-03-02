@@ -15,6 +15,8 @@
 package com.google.sps.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,9 +26,24 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
+  private List<String> greetings;
+
+  @Override
+  public void init() {
+    greetings = new ArrayList<>();
+    greetings.add("This is a wonderful day, I have never seen this one before.");
+    greetings.add("For me, a lovely day is any day I wake up.");
+    greetings.add("Make each day your masterpiece.");
+    greetings.add("Every day is a good day. There is something to learn, care and celebrate.");
+    greetings.add("It is time to start living the life you have imagined.");
+    greetings.add("No matter how you feel, get up, dress up and show up.");
+  }
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    String greeting = greetings.get((int) (Math.random() * greetings.size()));
+
     response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello Maurice Bugg</h1>");
+    response.getWriter().println(greeting); 
   }
 }
