@@ -256,7 +256,12 @@ body
     border-bottom-right-radius: 50px;
     transition: 1s;
 }
-
+/*--------------------Map------------------------*/
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 500px;
+}
 /*--------------------Contact--------------------*/
 .contact
 {

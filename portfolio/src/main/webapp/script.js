@@ -16,22 +16,14 @@
  * Adds a random welcome message to welcome page.
  */
 function getRandomQuoteUsingArrowFunctions(){
- /* const response = await fetch('/data');
-  const greeting = await response.text();
-  document.getElementById('greeting-container').innerText = greeting;*/
-
-fetch('/data')  // sends a request to /my-data-url
-.then(response => response.json()) // parses the response as JSON
-.then((greetings) => { // now we can reference the fields in greetings!
-
-const greetListElement = document.getElementById('greeting-container');
-    greetListElement.innerHTML = '';
-    greetListElement.appendChild( 
-        createListElement('1: ' + greetings[0]));
-    greetListElement.appendChild(
-        createListElement('2: ' + greetings[1]));
-    greetListElement.appendChild(
-        createListElement('3: ' + greetings[2]));
+    fetch('/data').then(response => response.json()).then((greetings) => { 
+        console.log(greetings[0]);
+        console.log(greetings[1]);
+    // Build the list of comment entries
+    const greetList = document.getElementById('greeting-container');
+    greetings.forEach((line) => {
+      greetList.appendChild(createListElement(line));
+    });
   });
 }
 
@@ -40,4 +32,11 @@ function createListElement(text) {
   const liElement = document.createElement('li');
   liElement.innerText = text;
   return liElement;
+}
+
+/** Creates a map and adds it to the page. */
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }

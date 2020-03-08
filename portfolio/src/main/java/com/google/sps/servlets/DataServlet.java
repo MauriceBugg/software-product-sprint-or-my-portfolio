@@ -32,21 +32,33 @@ public class DataServlet extends HttpServlet {
   @Override
   public void init() {
     greetings = new ArrayList<>();
-    greetings.add("This is a wonderful day, I have never seen this one before.");
-    greetings.add("For me, a lovely day is any day I wake up.");
-    greetings.add("Make each day your masterpiece.");
-    greetings.add("Every day is a good day. There is something to learn, care and celebrate.");
-    greetings.add("It is time to start living the life you have imagined.");
-    greetings.add("No matter how you feel, get up, dress up and show up.");
+
+    greetings.add("world");
+    greetings.add("hello");
   }
+
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    /*String quote = quotes.get((int) (Math.random() * quotes.size()));*/
     Gson gson = new Gson();
     String json = gson.toJson(greetings); 
 
+   
     response.setContentType("text/html;");
     response.getWriter().println(json); 
   }
+
+
+   @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    // Get the input from the form.
+    String userComment = request.getParameter("text-input");
+    
+    greetings.add(userComment);
+
+    // Redirect back to the HTML page.
+    response.sendRedirect("/index.html");
+  }
+
 }
