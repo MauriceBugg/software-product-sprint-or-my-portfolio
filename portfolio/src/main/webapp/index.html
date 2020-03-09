@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <title>Maurice's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-    <link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/gif" href="favicon.ico">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7douxXYV5ZXALuiWG9tB151llWr4esZY"></script>
   </head>
-  <body>
-    
-  <!--------------------Header Section-------------------->
+  <!--<body onload="getRandomQuoteUsingArrowFunctions()">-->
+  <body onload="createMap()">
+    <!--------------------Header Section-------------------->
     <section id="header">
-        <div class="container text-center">
-            <div class="welcome">
-                <h1>WELCOME TO MAURICE'S PORTFOLIO</h1>
-            </div>
-        </div>
+        <div id="welcome">WELCOME TO MAURICE'S PORTFOLIO</div>
+        
+      <form action="/data" method="POST">
+           <!-- 
+            <textarea name="text-input">Awesome Webpage!</textarea>
+        
+            <br/><br/>
+
+            <input type="submit"/>
+        </form>
+-->
+        <div id="greeting-container"></div>
         <div class="scroll-btn">
             <div class="scroll-bar"><a href="#about">Click Me</a></div>
         </div>
@@ -32,7 +41,6 @@
                 <a class="navbar-brand"><img src="images/logo.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
@@ -207,7 +215,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="activities-box">
-                        <span>Exercise</span>
+                        <i><span>Exercise</span></i>
                         <p> 
                             Right now I am on a Monday, Wednesday, Friday Training
                             split. I am only doing three full body workouts a week, 
@@ -218,7 +226,7 @@
 
                 <div class="col-md-4">
                     <div class="activities-box">
-                        </i><span>TV Shows</span>
+                        <i><span>TV Shows</span></i>
                         <p> 
                             Currently Watching How To Get Away With Murder, Black Mirror,
                             and I am about to start watching Demon Slayer.
@@ -228,7 +236,7 @@
 
                 <div class="col-md-4">
                     <div class="activities-box">
-                        <i class="fas fa-book-open"></i><span>Reading</span>
+                        <i><span>Reading</span></i>
                         <p> 
                             When I do get the time I like reading-self help book. 
                             Right now books on stocks and communicaition are peaking my interest.
@@ -238,6 +246,10 @@
             </div>
         </div>
     </div>
+    
+<!-------------------Google Map------------------>
+
+<div id="map"></div>
 
 <!--------------------Contact-------------------->
     <div class="contact" id="contact">
@@ -288,10 +300,8 @@
 
 <!--------------------Smooth Scroll-------------------->
     <script src="smooth-scroll.js"></script>
+    <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
 
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
-
+<!---------------------Google Maps-------------------->
   </body>
 </html>

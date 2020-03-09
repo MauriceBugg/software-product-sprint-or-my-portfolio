@@ -16,18 +16,27 @@ body
     background-attachment: fixed;
 }
 
-.welcome
+#welcome
 {
-    top: 35%;
+    top: 15%;
     position: absolute;
     text-align: center;
     font-family: sans-serif;
     color: #fff;
+    font-size: 70px;
 }
 
-.welcome h1
+#greeting-container
 {
-    font-size: 70px;
+    top: 60%;
+    position: absolute;
+    padding-left: 30px;
+    text-align: left;
+    font-family: sans-serif;
+    color: rgb(253, 243, 243);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(250, 250, 250, 0.377)
 }
 
 .scroll-btn
@@ -247,7 +256,12 @@ body
     border-bottom-right-radius: 50px;
     transition: 1s;
 }
-
+/*--------------------Map------------------------*/
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 500px;
+}
 /*--------------------Contact--------------------*/
 .contact
 {

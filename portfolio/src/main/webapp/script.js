@@ -13,18 +13,30 @@
 // limitations under the License.
 
 /**
- * Adds a random album to the page.
+ * Adds a random welcome message to welcome page.
  */
-function addRandomAlbum() {
-  const favorite_album =
-      ['Drake: Take Care', 'Adele: 25', 'Weekend: Trilogy', 'Kanye West: The Life of Pablo', 
-      'Sam Smith: In the Lonely Hour', '2 Chainz: Based On A T.R.U. Story', 'Yung Thug: So Much Fun',
-      'Maroon 5: V', 'Imagine Dragons: Night Visions'];
+function getRandomQuoteUsingArrowFunctions(){
+    fetch('/data').then(response => response.json()).then((greetings) => { 
+        console.log(greetings[0]);
+        console.log(greetings[1]);
+    // Build the list of comment entries
+    const greetList = document.getElementById('greeting-container');
+    greetings.forEach((line) => {
+      greetList.appendChild(createListElement(line));
+    });
+  });
+}
 
-  // Pick a random album.
-  const album = favorite_album[Math.floor(Math.random() * favorite_album.length)];
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
 
-  // Add it to the page.
-  const albumContainer = document.getElementById('album-container');
-  albumContainer.innerText = album;
+/** Creates a map and adds it to the page. */
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
